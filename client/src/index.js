@@ -4,12 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './component/Login';
-import Logout from './component/Logout';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <App/>
+  <App />
   // <BrowserRouter>
   //   <Routes>
   //     <Route path='/' element={<App />} />
