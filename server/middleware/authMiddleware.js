@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/userModel');
 const jwtSecret = process.env.SECRET_KEY
 
-const authMiddleware = async (req, res) => {
+const authMiddleware = async (req, res, next) => {
     const { authorization } = req.headers;
     if (!authorization) {
         return res.status(400).json({ error: "you must login first !!" })
