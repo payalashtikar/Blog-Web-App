@@ -4,8 +4,15 @@ const dotEnv = require('dotenv')
 dotEnv.config();
 const port = process.env.PORT
 const dbconnection = require('./db/dbConnection')
+const cors = require('cors')
 
 dbconnection
+
+//middleware
+app.use(express.json())
+app.use(cors());
+app.use(require('./routes/userRoute'))
+app.use(require('./routes/blogRoute'))
 
 
 app.get('/', async (req, res) => {
